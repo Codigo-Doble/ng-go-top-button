@@ -10,26 +10,26 @@
       "prefix": "lib",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "tsConfig": "projects/ng-go-top-button/tsconfig.lib.json",
             "project": "projects/ng-go-top-button/ng-package.json"
           },
           "configurations": {
             "production": {
               "tsConfig": "projects/ng-go-top-button/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ng-go-top-button/tsconfig.lib.json"
             }
-          }
+          },
+          "defaultConfiguration": "production"
         },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "tsConfig": [
-              "projects/ng-go-top-button/tsconfig.lib.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "main": "projects/ng-go-top-button/src/test.ts",
+            "tsConfig": "projects/ng-go-top-button/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-go-top-button/karma.conf.js"
           }
         }
       }
@@ -70,7 +70,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
@@ -119,6 +118,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "ng-go-top-button"
 }

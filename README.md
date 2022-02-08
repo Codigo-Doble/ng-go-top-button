@@ -1,105 +1,27 @@
-# ng-go-top-button
-A simple customizable go-top button component for Angular projects.
+# NgGoTopButtonLib
 
-## Versions
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.2.
 
-This is the new version of the original [ng2-go-top-button](https://www.npmjs.com/package/ng2-go-top-button). This version was re-created according to the new Angular library format to support Angular v9 and higher. For previous Angular versions refer to the original version.
+## Development server
 
-## Installation
-```
-npm install ng-go-top-button --save
-```
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Usage
-Import statement in the app module:
-```typescript
-import {GoTopButtonModule} from 'ng-go-top-button';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+## Code scaffolding
 
-...
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-@NgModule({
-    ...
-    imports: [..., GoTopButtonModule, BrowserAnimationsModule],
-    ...
-```
+## Build
 
-In the target app component:
-```typescript
-import { Component, ViewEncapsulation } from '@angular/core';
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-@Component({
-  ...
-  encapsulation: ViewEncapsulation.None // for animations and custom styling to work
-})
-export class AppComponent {
-...
-}
-```
+## Running unit tests
 
-On your template paste the `<ng-go-top-button></ng-go-top-button>` html. This will add a simple button with default styles and without animated scroll. By default go-top-button will appear on the right side, 50% top and bottom and without any icons or text. You can then customize its styles and behaviour.
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-Example of customization:
-```angular2html
-<ng-go-top-button 
-                 [animate]="true"
-                 [speed]="50"
-                 [acceleration]="2"
-                 [scrollDistance]="300"
-                 [classNames]="'custom-class'"
-                 [styles]="{
-                    'border-radius': '20px 20px 20px 20px',
-                    'right': '5px',
-                    'color': 'green',
-                    'border': '5px solid',
-                    'line-height': '20px'
-                 }">
-        <i class=\'fa fa-arrow-up\'></i>
-  </ng-go-top-button>
-```
-Custom CSS class declaration (if needed):
-```css
-.custom-class {
-    position: fixed;
-    background-color: pink;
-    border-color: green;
-    height: 30px;
-    width: 30px;
-}
-```
+## Running end-to-end tests
 
-## API
-| Property | Type | Description |
-| ------ | ------ | ------ |
-| scrollDistance | *number* | Number of pixels to be scrolled Y for button to be shown. Defaults to 200px. Must be greater than zero. |
-| styles | *object* | User-defined styles config for the button. |
-| classNames | *string* | Custom class names in the following format 'class1 class2 class3'. *Note*: this attribute completely overrides the default '.go-top-button' class attributes, so one should specify all style properties manually.|
-| animate | *boolean* | If true, scrolling will be animated. False by default. |
-| speed | *number* | Speed of animated scroll. Must be greater than 1. 80 by default. |
-| acceleration  | *number* | Number of pixels to speed up when scrolling is animated. 0 by default - this way page will be scrolled top with the constant speed. |
-| tabIndex  | *number*  |   Custom tabindex button attribute value, by default 0.
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
+## Further help
 
-## IE-specific issues:
-
-IE does not support web animations. If you would like to enable them, install and import the corresponding polyfill to your polyfills.js file:
-
-In your project's directory:
-```
-npm install --save web-animations-js
-```
-
-In polyfills.js:
-```
-import 'web-animations-js';
-```
-
-## Example project
-
-You can find example project that uses `ng-go-top-button` in `projects/example-app/` directory of this repository. To run the example project execute the following commands from the root directory of the project:
-
-```
-ng build --project=example-app
-cd projects/example-app
-ng serve
-```
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

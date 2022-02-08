@@ -1,6 +1,6 @@
 {
-  "name": "ng-go-top-button",
-  "version": "10.0.1",
+  "name": "@codigo-doble/ng-go-top-button",
+  "version": "13.0.1",
   "description": "A simple customizable go-top button component for Angular projects.",
   "author": {
     "email": "anya.pogorelova@gmail.com",
@@ -14,7 +14,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/annapogorelova/ng-go-top-button.git"
+    "url": "https://github.com/Codigo-Doble/ng-go-top-button.git"
   },
   "license": "MIT",
   "keywords": [
@@ -25,12 +25,12 @@
     "button"
   ],
   "peerDependencies": {
-    "@angular/common": "^10.2.1",
-    "@angular/core": "^10.2.1",
-    "@angular/animations": "^10.2.1",
-    "@angular/platform-browser": "^10.2.1"
+    "@angular/common": "^13.2.0",
+    "@angular/core": "^13.2.0",
+    "@angular/animations": "^13.2.0",
+    "@angular/platform-browser": "^13.2.0"
   },
   "dependencies": {
-    "tslib": "^2.0.0"
+    "tslib": "^2.3.0"
   }
 }
